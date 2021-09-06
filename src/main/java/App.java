@@ -1,7 +1,3 @@
-import com.sun.xml.internal.ws.util.StringUtils;
-
-import java.io.BufferedReader;
-import java.util.Locale;
 
 public class App {
     /**
@@ -14,9 +10,9 @@ public class App {
         int vower = countVowelCharacter();
         System.out.println(vower);
 
-        String abc = vietHoaChuCaiDau();
-        System.out.println(abc);
-        chuyenKyTu();
+        String str = upperCaseFirstLetter();
+        System.out.println(str);
+        capitalize();
 
 
     }
@@ -31,7 +27,7 @@ public class App {
         return count;
     }
 
-    public static String vietHoaChuCaiDau() {
+    public static String upperCaseFirstLetter() {
         String str = "You Only Live Once. But if You do it right. once is Enough";
         String[] arr = str.split(" ");
         StringBuffer sb = new StringBuffer();
@@ -42,7 +38,7 @@ public class App {
         return sb.toString().trim();
     }
 
-    public static void chuyenKyTu() {
+    public static void capitalize() {
         String str = "you Only Live Once. But if You do it right. once is Enough";
         String output = str.substring(0, 1).toUpperCase() + str.substring(1).toLowerCase();
         StringBuilder result = new StringBuilder(output.length());
